@@ -208,10 +208,6 @@
   background-repeat: no-repeat;
 }
 
-.passwordTesterBtn{
-  margin-bottom: 30px;
-}
-
 .div-block-5 {
   position: relative;
   display: -webkit-box;
@@ -432,8 +428,10 @@
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 120vh;
+  height: 130vh;
   margin-top: 113px;
+  margin-right: -1053px;
+  padding-bottom: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -493,10 +491,11 @@
 }
 
 .paragraph-4.ptinfo {
-  margin-top: 44px;
+  margin-top: 85px;
   margin-bottom: -14px;
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
+  text-align: center;
 }
 
 .div-block-12 {
@@ -580,6 +579,83 @@
 .heading-5 {
   margin-top: 0px;
   margin-bottom: 0px;
+  font-family: Montserrat, sans-serif;
+  font-size: 36px;
+}
+
+.section {
+  margin-top: 125px;
+}
+
+.creditcontainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 250px;
+  margin-top: 0px;
+  padding-right: 161px;
+  padding-left: 161px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6dcacd;
+}
+
+.paragraph-5 {
+  font-family: Montserrat, sans-serif;
+  color: #313131;
+  font-weight: 500;
+  text-align: center;
+}
+
+.link-3 {
+  color: #363636;
+}
+
+.link-4 {
+  color: #363636;
+}
+
+.link-5 {
+  color: #363636;
+}
+
+.text-span {
+  color: #363636;
+}
+
+.link-6 {
+  color: #272727;
+}
+
+.link-7 {
+  color: #383838;
+}
+
+.link-8 {
+  color: #383838;
+}
+
+.link-9 {
+  color: #383838;
+}
+
+.text-span-2 {
+  font-weight: 700;
+}
+
+.text-span-3 {
+  font-weight: 700;
+}
+
+.text-span-4 {
+  font-weight: 700;
 }
 
 @media screen and (max-width: 991px) {
