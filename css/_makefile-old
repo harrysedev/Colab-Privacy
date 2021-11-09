@@ -1,0 +1,7 @@
+@copy: css/gt_fonts.css
+@copy: css/gt_general.css
+@copy: css/gt_gt_header.css
+@copy: css/gt_gt_footer.css
+@copy: css/gt_palette_metal.css
+@copy: css/gt_body_styles.css
+@copy: css/gt_symbol_svg.css

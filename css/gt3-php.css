@@ -1,0 +1,35 @@
+/** GT Theme PHP Framework Standard Definitions **/
+
+.visually-hidden {   /* Borrowed from Drupal */
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+}
+
+DIV.region-header {
+  overflow: auto;
+}
+
+DIV.gt-page-body {
+  line-height: 1.5;
+  font-size: 110%;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+DIV.gt-page-body MAIN.main-content {
+  padding: 0 15px;
+}
+
+DIV.gt-page-body P {
+  margin: 10px 0;
+}
+
+DIV.gt-page-body INPUT,
+DIV.gt-page-body BUTTON,
+DIV.gt-page-body SELECT {
+  font-size: 90%;
+}

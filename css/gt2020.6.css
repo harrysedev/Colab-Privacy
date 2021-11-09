@@ -1,0 +1,1639 @@
+/*=== Load in the Roboto and Abel fonts ===*/
+
+/* Roboto */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+
+/* Abel - To Be Removed */
+@import url("https://fonts.googleapis.com/css?family=Abel:400");
+
+
+/* din-2014 */
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * din-2014:
+ *   - http://typekit.com/eulas/00000000000000007735aff1
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-08-11 16:27:12 UTC"}*/
+
+@font-face {
+font-family:"din-2014";
+src:url("https://use.typekit.net/af/2bc98d/00000000000000007735aff1/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/2bc98d/00000000000000007735aff1/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/2bc98d/00000000000000007735aff1/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;
+}
+/*=== Core layout styles for the GT 3.x Theme ===*/
+
+/**-- Set standard fonts and weights --**/
+
+HTML BODY {
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+B,STRONG {
+  font-weight: 700;
+}
+
+DIV#main-wrapper {
+  font-size: 110%;
+  font-weight: 400;
+}
+
+/**-- Universal section formatting to create centered maximium 1170px width content area --**/
+
+DIV.gt-background-gt-header, DIV.gt-background-site-identity, 
+DIV.gt-background-menu, DIV.gt-background-page,
+DIV.gt-background-site-footer, DIV.gt-background-gt-footer {
+  position: relative;
+  clear: both;
+  box-sizing: unset;
+}
+
+/*-- The following is required to deal with HTML rendering oddities due to all of our specially placed gold header parts --*/
+DIV.gt-background-gt-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+DIV.gt-gt-header, DIV.gt-site-identity, DIV.region-header, DIV.region-primary-menu, DIV.gt-page-body, 
+DIV.gt-super-footer, DIV.gt-site-footer, DIV.gt-gt-footer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+  clear: both;
+}
+
+BODY.gt-widepage DIV.gt-gt-header, BODY.gt-widepage DIV.region-header, BODY.gt-widepage DIV.region-primary-menu, BODY.gt-widepage DIV.gt-page-body, 
+BODY.gt-widepage DIV.gt-super-footer, BODY.gt-widepage DIV.gt-site-footer, BODY.gt-widepage DIV.gt-gt-footer {
+  max-width: 1500px;
+}
+
+DIV.region-header, DIV.region-primary-menu {
+  line-height: 1.2;
+}
+
+DIV.region-primary-menu {
+  position: relative;
+}
+
+/**-- Tweak nested list margins --**/
+
+DIV.text-formatted UL, DIV.text-formatted OL {
+  padding: 0 0 0.25em 20px;
+}
+
+DIV.content UL UL {
+  margin: 4px 0;
+}
+
+CAPTION P {
+  margin: 6px 0;
+}
+
+
+/**-- Set standard link style to dotted underline --**/
+
+BODY A:link, BODY A:visited {
+  border-bottom: dotted 1px;
+  text-decoration: none;
+}
+
+BODY A:hover, BODY A:active,
+FOOTER.site-footer .content A:hover, FOOTER.site-footer .content A:focus {
+  border-bottom: solid 1px;
+  text-decoration: none;
+}
+
+/* Cancel the effect for links on the primary menu bar */
+
+DIV.primary-menu-wrapper A:link, DIV.primary-menu-wrapper A:visited {
+  border-bottom: none;
+}
+
+
+/**-- Normalize the Header and Footer Areas --**/
+
+HEADER#gt-header, FOOTER#gt-footer {
+  margin: 0;
+  background-image: none;
+  line-height: 1.5;
+}
+
+
+FOOTER#gt-footer {
+  font-size: initial;
+  clear: both;
+}
+DIV.gt-background-gt-header {
+  background: var(--gtweb-medium-gold);
+}
+
+@supports (display: grid) {
+  @media all and (min-width: 600px) {
+    DIV.gt-background-gt-header {
+      background: linear-gradient(to right,var(--gtweb-medium-gold) 0%,var(--gtweb-medium-gold) 50%,var(--gtweb-primary-gold) 50%,var(--gtweb-primary-gold) 100%);
+    }
+    DIV.gt-gt-header {
+      display: grid;
+      grid-template-columns: 242px auto;
+    }
+    DIV.gt-gt-header DIV.gt-header-gradient {
+      background: linear-gradient(to right,var(--gtweb-medium-gold) 0%,var(--gtweb-primary-gold) 100%);
+      height: 82px;
+    }
+  }
+}
+
+DIV.gt-gt-header {
+  line-height: 1.3;
+}
+
+
+DIV.gt-gt-header DIV.gt-header-logo {
+  width: 242px;
+  padding: 19px 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+DIV.gt-gt-header DIV.gt-header-logo IMG {
+}
+
+DIV.gt-gt-header DIV.gt-header-logo A {
+  border-bottom: none;
+}
+
+DIV.gt-site-identity-wrapper {
+  background-color: #ffffff;  background-color: var(--gtweb-background-page);
+}
+
+DIV.gt-branding__name {
+  padding: 10px 0;
+  font-family: "din-2014", sans-serif;
+  font-size: 205%;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media all and (min-width: 966px) {
+  DIV.gt-branding__name {
+    font-size: 264%;
+  }
+}
+
+DIV.gt-branding__name A,
+DIV.gt-branding__name A:link,
+DIV.gt-branding__name A:visited,
+DIV.gt-branding__name A:hover {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+DIV.gt-branding__name A:hover,
+DIV.gt-branding__name A:focus,
+DIV.gt-branding__name A:active {
+  border-bottom: dotted 1px;
+  text-decoration: none;
+}
+
+
+/*-- The site parent unit name line --*/
+DIV.gt-branding__parentUnit {
+  padding-top: 8px;
+  font-size: 68%;
+  font-weight: 400;
+}
+/*=== GT Gold Footer Bar Style Rules ===*/
+
+
+DIV.gt-background-gt-footer-alt {
+  width: 100%;
+  height: 16px;
+  background: linear-gradient(to left, var(--gtweb-primary-gold), var(--gtweb-gradient-gold));
+}
+
+DIV.gt-background-gt-footer {
+  background: linear-gradient(to right, var(--gtweb-primary-gold), var(--gtweb-gradient-gold));
+}
+
+BODY DIV.gt-gt-footer {
+  font-family: "Roboto";
+  font-size: 85%;
+  font-weight: 500;
+  overflow: auto;
+  padding-top: 16px;
+}
+
+DIV.gt-gt-footer DIV.gt-gt-footer-farleftcol,
+DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns,
+DIV.gt-gt-footer DIV.gt-gt-footer-right {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+
+/* Footer Address Section */
+
+DIV.gt-gt-footer DIV.gt-gt-footer-farleftcol {
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+@media all and (min-width: 966px) {
+
+  DIV.gt-gt-footer DIV.gt-gt-footer-farleftcol {
+    float: left;
+    width: 25%;
+  }
+
+}
+
+DIV.gt-gt-footer H2.gt-gt-footer-institute {
+  font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  font-size: 110%;
+  margin-top: 0;
+}
+
+DIV.gt-gt-footer DIV.gt-gt-footer-address {
+  border-left: solid 1px var(--gtweb-accent-gold);
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+DIV.gt-gt-footer DIV.gt-gt-footer-address P {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+DIV.gt-gt-footer DIV.gt-gt-footer-address P STRONG {
+  font-weight: 700;
+}
+
+
+/* Footer Legal Links */
+
+DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns {
+  padding: 4px 0;
+  box-sizing: border-box;
+}
+
+DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns UL {
+  padding: 0 0 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns UL LI {
+  display: block;
+  padding: 12px 0 12px 12px;
+  border-left: solid 1px var(--gtweb-accent-gold);
+  font-size: 1.35em;
+}
+
+DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns UL LI A {
+  text-decoration: none;
+}
+
+@media all and (min-width: 966px) {
+
+  DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns {
+    float: left;
+    width: 50%;
+  }
+
+  DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns UL {
+    float: left;
+    width: 50%;
+  }
+
+  DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns UL LI {
+    white-space: nowrap;
+    padding: 0 0 8px 12px;
+    font-size: unset;
+  }
+
+}
+
+
+/* Logo Section */
+
+DIV.gt-gt-footer DIV.gt-gt-footer-right {
+  float: right;
+  padding: 12px 8px 0 0;
+  text-align: center;
+}
+
+DIV.gt-gt-footer DIV.gt-gt-footer-right IMG {
+  max-width: 200px;
+}
+
+DIV.gt-gt-footer DIV.gt-gt-footer-right A {
+  border-bottom: none;
+}
+
+DIV.gt-gt-footer DIV.gt-gt-footer-right P.gt-gt-footer-copyright {
+  font-weight: 400;
+  font-size: 80%;
+  margin: 2px 0 10px 0;
+}
+
+
+/***-- Print Output Special Rules --***/
+
+@media print {
+
+  DIV.gt-gt-footer NAV.gt-gt-footer-legalcolumns UL.gt-gt-footer-legallinks {
+    display: none;
+  }
+
+}
+/*=== Standard Buzz Gold Color Pallete ===*/
+
+/**-- GT Official Colors --**/
+
+/*-- Note: When changing colors, you must also update core/code/GTHeaderBlock.php, which has SVG colors defined --*/
+
+:root {
+  --gtweb-accent-gold:     #d2c79f;
+  --gtweb-primary-gold:    #b3a369;
+  --gtweb-gradient-gold:   #bfb37c;
+  --gtweb-medium-gold:     #a4925a;
+  --gtweb-heading-gold:    #958447;
+  --gtweb-accessible-gold: #857437;
+  --gtweb-background-page: #ffffff;
+  --gtweb-black-text:      #333333;
+  --gtweb-white-text:      #ffffff;
+  --gtweb-sitefooter-grey: #262626;
+  --gtweb-navy-blue:       #003057;
+  --gtweb-navy-darkblue:   #001840;  /*- For button hover: set to a shade darker than gtweb-navy-blue -*/
+  --gtweb-link-blue:       #004f9f;
+  --gtweb-linkhover-blue:  #1879db;
+  --gtweb-linkvisit-mauve: #730053;
+  --gtweb-pimile-light:    #f2f3f1;
+  --gtweb-buzz-gold:       #eeb211;
+}
+
+
+/**-- Site Identity, Menu Bar, Page, and Site Footer Backgrounds --**/
+
+DIV.gt-background-site-identity, DIV.gt-background-site-footer {
+  background-color: #303030;  background-color: var(--gtweb-sitefooter-grey);
+}
+
+DIV.gt-background-menu, DIV.gt-background-page {
+  background-color: #ffffff;  background-color: var(--gtweb-background-page);
+}
+
+/**-- Document Body --**/
+
+HTML BODY {
+  color: #303030;  color: var(--gtweb-black-text);
+  background-color: #ffffff;  background-color: var(--gtweb-background-page);
+}
+
+
+/**-- Primary Link Colors --**/
+
+BODY A:link {
+  color: var(--gtweb-link-blue);
+  border-bottom-color: var(--gtweb-link-blue);
+}
+
+BODY A:visited {
+  color: var(--gtweb-linkvisit-mauve);
+  border-bottom-color: var(--gtweb-linkvisit-mauve);
+}
+
+BODY A:hover, BODY A:active, BODY A:focus {
+  color: var(--gtweb-linkhover-blue);
+  border-bottom-color: var(--gtweb-linkhover-blue);
+}
+
+
+/**- Overall Header Background Color -**/
+
+HEADER#gt-header {
+  background-color: #ffffff;  background-color: var(--gtweb-background-page);
+}
+
+
+/**-- Gold Header / Footer Text Color --**/
+
+HEADER#gt-header,
+FOOTER#gt-footer {
+  color: #262626;  color: var(--gtweb-sitefooter-grey);
+}
+
+HEADER#gt-header A:link, HEADER#gt-header A:visited {
+  color: #262626;  color: var(--gtweb-navy-blue);
+  border-bottom-color: black;
+}
+
+FOOTER#gt-footer A:link, FOOTER#gt-footer A:visited {
+  color: #262626;  color: var(--gtweb-sitefooter-grey);
+  border-bottom-color: black;
+}
+
+HEADER#gt-header A:hover, HEADER#gt-header A:active, HEADER#gt-header A:FOCUS {
+  color: #262626;  color: var(--gtweb-navy-blue);
+  border-bottom-color: black;
+}
+
+FOOTER#gt-footer A:hover, FOOTER#gt-footer A:active, FOOTER#gt-footer A:FOCUS {
+  color: #262626;  color: var(--gtweb-sitefooter-grey);
+  border-bottom-color: black;
+}
+
+
+/**-- Site Identity Bar Colors --**/
+
+HEADER#gt-header DIV.region-header {
+  color: #ffffff;  color: var(--gtweb-white-text);
+}
+
+HEADER#gt-header DIV.region-header A:link, HEADER#gt-header DIV.region-header A:visited {
+  color: #ffffff;  color: var(--gtweb-white-text);
+  border-bottom-color: #ffffff;  border-bottom-color: var(--gtweb-white-text);
+}
+
+HEADER#gt-header DIV.region-header A:hover, HEADER#gt-header DIV.region-header A:active, HEADER#gt-header DIV.region-header A:FOCUS {
+  color: #ffffff;  color: var(--gtweb-white-text);
+  border-bottom-color: #ffffff;  border-bottom-color: var(--gtweb-white-text);
+}
+
+
+/**-- GT Header Drop-Down Tray --**/
+
+DIV.gt-gt-header-tray {
+  background-color: #dddddd;
+}
+
+
+/*- Menu Bar: Primary Colors -*/
+
+DIV.primary-menu-content {  /* Main menu bar */
+  background-color: #ffffff;  background-color: var(--gtweb-background-page);
+}
+
+DIV.primary-menu-content,
+DIV.region-primary-menu NAV.block-menu A:link,
+DIV.region-primary-menu NAV.block-menu A:visited {
+  color: #303030;  color: var(--gtweb-black-text);
+}
+
+DIV.region-primary-menu NAV.block-menu A:hover,
+DIV.region-primary-menu NAV.block-menu A:focus {
+  background-color: #c0c0c0;
+  color: #303030;  color: var(--gtweb-black-text);
+}
+
+
+/**-- Site Footer Colors --**/
+
+FOOTER#gt-footer DIV.gt-site-footer,
+FOOTER#gt-footer DIV.gt-super-footer {
+  color: #ffffff;  color: var(--gtweb-white-text);
+}
+
+FOOTER#gt-footer DIV.gt-site-footer A:link, FOOTER#gt-footer DIV.gt-site-footer A:visited,
+FOOTER#gt-footer DIV.gt-super-footer A:link, FOOTER#gt-footer DIV.gt-super-footer A:visited {
+  color: #ffffff;  color: var(--gtweb-white-text);
+  border-bottom-color: white;
+}
+
+FOOTER#gt-footer DIV.gt-site-footer A:hover, FOOTER#gt-footer DIV.gt-site-footer A:active, FOOTER#gt-footer DIV.gt-site-footer A:focus,
+FOOTER#gt-footer DIV.gt-super-footer A:hover, FOOTER#gt-footer DIV.gt-super-footer A:active, FOOTER#gt-footer DIV.gt-super-footer A:focus {
+  color: #ffffff;  color: var(--gtweb-white-text);
+  border-bottom-color: white;
+}
+/****** Blocks: White Text on Blue Background ******/
+DIV.iac-color-white-on-blue {
+  background-color: blue;
+  background-color: var(--gtweb-navy-blue);
+  color: white;
+}
+
+/*DIV.iac-color-white-on-blue:not(.layout-builder-block) { */
+DIV.iac-color-white-on-blue {
+  padding: 16px 16px;
+}
+
+BODY DIV.iac-color-white-on-blue H2,
+BODY DIV.iac-color-white-on-blue H3,
+BODY DIV.iac-color-white-on-blue H4,
+BODY DIV.iac-color-white-on-blue H5,
+BODY DIV.iac-color-white-on-blue H6 {
+  color: white;
+  border-top: none;
+  margin-top: 0;
+}
+
+DIV.iac-color-white-on-blue A,
+DIV.iac-color-white-on-blue A:link,
+DIV.iac-color-white-on-blue A:visited {
+  color: #d0d0d0;
+  border-bottom-color: #d0d0d0;
+}
+
+
+DIV.iac-color-white-on-blue A:focus,
+DIV.iac-color-white-on-blue A:hover {
+  color: #e0e0e0;
+  border-bottom-color: #e0e0e0;
+}
+
+
+/****** Blocks: White Text on Dark Grey Background ******/
+DIV.iac-color-white-on-grey {
+  background-color: #262626;  background-color: var(--gtweb-sitefooter-grey);
+  color: white;
+}
+
+/* DIV.iac-color-white-on-grey:not(.layout-builder-block) { */
+DIV.iac-color-white-on-grey {
+  padding: 16px 16px;
+}
+
+BODY DIV.iac-color-white-on-grey H2,
+BODY DIV.iac-color-white-on-grey H3,
+BODY DIV.iac-color-white-on-grey H4,
+BODY DIV.iac-color-white-on-grey H5,
+BODY DIV.iac-color-white-on-grey H6 {
+  color: white;
+  border-top: none;
+  margin-top: 0;
+}
+
+DIV.iac-color-white-on-grey A,
+DIV.iac-color-white-on-grey A:link {
+  color: #d0d0d0; color: var(--gtweb-darklink-blue);
+  border-bottom-color: #d0d0d0; color: var(--gtweb-darklink-blue);
+}
+
+DIV.iac-color-white-on-grey A:focus,
+DIV.iac-color-white-on-grey A:hover {
+  color: #e0e0e0; color: var(--gtweb-darklinkhover-blue);
+  border-bottom-color: #e0e0e0; color: var(--gtweb-darklinkhover-blue);
+}
+
+DIV.iac-color-white-on-grey A:visited {
+  color: #e0e0e0; color: var(--gtweb-darklinkvisit-mauve);
+  border-bottom-color: #e0e0e0; color: var(--gtweb-darklinkvisit-mauve);
+}
+
+
+/****** Blocks: Black Text on Tech Gold Background ******/
+DIV.iac-color-black-on-gold {
+  background-color: #dddddd;  background-color: var(--gtweb-primary-gold);
+  color: var(--gtweb-black-text);
+}
+
+/*DIV.iac-color-black-on-gold:not(.layout-builder-block) { */
+DIV.iac-color-black-on-gold {
+  padding: 16px 16px;
+}
+
+BODY DIV.iac-color-black-on-gold H2,
+BODY DIV.iac-color-black-on-gold H3,
+BODY DIV.iac-color-black-on-gold H4,
+BODY DIV.iac-color-black-on-gold H5,
+BODY DIV.iac-color-black-on-gold H6 {
+  color: var(--gtweb-black-text);
+  border-top: none;
+  margin-top: 0;
+}
+
+DIV.iac-color-black-on-gold A,
+DIV.iac-color-black-on-gold A:link {
+  color: #004f9f; color: var(--gtweb-link-blue);
+  border-bottom-color: #004f9f; border-bottom-color: var(--gtweb-link-blue);
+}
+
+DIV.iac-color-black-on-gold A:focus,
+DIV.iac-color-black-on-gold A:hover {
+  color: #1879db; color: var(--gtweb-linkhover-blue);
+  border-bottom-color: #1879db; border-bottom-color: var(--gtweb-linkhover-blue);
+}
+
+DIV.iac-color-black-on-gold A:visited {
+  color: #004f9f; color: var(--gtweb-linkvisit-mauve);
+  border-bottom-color: #004f9f; border-bottom-color: var(--gtweb-linkvisit-mauve);
+}
+
+/*-- Change Gold Buttons to Blue Buttons when on Gold Background --*/
+
+BODY DIV.iac-color-black-on-gold P.gt-button-gold A {
+  background-color: #00254c;  background-color: var(--gtweb-navy-blue);
+  color: #e0e0e0 !important;
+}
+
+BODY DIV.iac-color-black-on-gold P.gt-button-gold A:focus,
+BODY DIV.iac-color-black-on-gold P.gt-button-gold A:hover {
+  background-color: #00153c;  background-color: var(--gtweb-navy-darkblue);
+  border: dotted 1px #e0e0e0;
+}
+
+
+/****** Blocks: Black Text on Light Grey Background ******/
+DIV.iac-color-black-on-grey {
+  background-color: #dddddd;  background-color: var(--gtweb-pimile-light);
+  color: var(--gtweb-black-text);
+}
+
+/* DIV.iac-color-black-on-grey:not(.layout-builder-block) { */
+DIV.iac-color-black-on-grey {
+  padding: 16px 16px;
+}
+
+BODY DIV.iac-color-black-on-grey H2,
+BODY DIV.iac-color-black-on-grey H3,
+BODY DIV.iac-color-black-on-grey H4,
+BODY DIV.iac-color-black-on-grey H5,
+BODY DIV.iac-color-black-on-grey H6 {
+  color: var(--gtweb-black-text);
+  border-top: none;
+  margin-top: 0;
+}
+
+DIV.iac-color-black-on-grey A,
+DIV.iac-color-black-on-grey A:link {
+  color: #004f9f; color: var(--gtweb-link-blue);
+  border-bottom-color: #004f9f; border-bottom-color: var(--gtweb-link-blue);
+}
+
+DIV.iac-color-black-on-grey A:focus,
+DIV.iac-color-black-on-grey A:hover {
+  color: #1879db; color: var(--gtweb-linkhover-blue);
+  border-bottom-color: #1879db; border-bottom-color: var(--gtweb-linkhover-blue);
+}
+
+DIV.iac-color-black-on-grey A:visited {
+  color: #004f9f; color: var(--gtweb-linkvisit-mauve);
+  border-bottom-color: #004f9f; border-bottom-color: var(--gtweb-linkvisit-mauve);
+}
+
+
+/****** Blocks: H2 Headings that are Links ******/
+BODY DIV.iac-color-white-on-blue A H2,
+BODY DIV.iac-color-white-on-blue A H3 {
+  color: #d0d0d0;
+}
+
+BODY DIV.iac-color-white-on-grey A H2,
+BODY DIV.iac-color-white-on-grey A H3 {
+  color: #d0d0d0; color: var(--gtweb-darklink-blue);
+}
+
+BODY DIV.iac-color-white-on-blue A:hover H2,
+BODY DIV.iac-color-white-on-blue A:focus H2,
+BODY DIV.iac-color-white-on-blue A:hover H3,
+BODY DIV.iac-color-white-on-blue A:focus H3 {
+  color: #e0e0e0;
+}
+
+BODY DIV.iac-color-white-on-grey A:hover H2,
+BODY DIV.iac-color-white-on-grey A:focus H2,
+BODY DIV.iac-color-white-on-grey A:hover H3,
+BODY DIV.iac-color-white-on-grey A:focus H3 {
+  color: #e0e0e0; color: var(--gtweb-darklinkhover-blue);
+}
+
+BODY DIV.iac-color-white-on-blue A:visited H2,
+BODY DIV.iac-color-white-on-blue A:visited H3,
+BODY DIV.iac-color-white-on-grey A:visited H2,
+BODY DIV.iac-color-white-on-grey A:visited H3 {
+  color: #e0e0e0; color: var(--gtweb-darklinkvisit-mauve);
+}
+
+BODY DIV.iac-color-black-on-gold A H2,
+BODY DIV.iac-color-black-on-grey A H2,
+BODY DIV.iac-color-black-on-gold A H3,
+BODY DIV.iac-color-black-on-grey A H3 {
+  color: var(--gtweb-link-blue);
+}
+
+BODY DIV.iac-color-black-on-gold A:hover H2,
+BODY DIV.iac-color-black-on-gold A:focus H2,
+BODY DIV.iac-color-black-on-grey A:hover H2,
+BODY DIV.iac-color-black-on-grey A:focus H2,
+BODY DIV.iac-color-black-on-gold A:hover H3,
+BODY DIV.iac-color-black-on-gold A:focus H3,
+BODY DIV.iac-color-black-on-grey A:hover H3,
+BODY DIV.iac-color-black-on-grey A:focus H3 {
+  color: var(--gtweb-linkhover-blue);
+}
+
+BODY DIV.iac-color-black-on-gold A:visited H2,
+BODY DIV.iac-color-black-on-grey A:visited H2,
+BODY DIV.iac-color-black-on-gold A:visited H3,
+BODY DIV.iac-color-black-on-grey A:visited H3 {
+  color: var(--gtweb-linkvisit-mauve);
+}
+
+/*== Blockquotes ==*/
+
+DIV.entry-content BLOCKQUOTE, /* For WordPress */
+BODY.cke_editable BLOCKQUOTE,
+DIV.text-formatted BLOCKQUOTE,
+DIV.node DIV.content BLOCKQUOTE {
+  border-left: 1px solid #333;
+  margin: 1.0rem 0.25rem 1.0rem 0.25rem;
+  padding: 0.5rem 1rem 0.5rem 1.4rem;
+  font-size: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  DIV.entry-content BLOCKQUOTE, /* For WordPress */
+  BODY.cke_editable BLOCKQUOTE,
+  DIV.text-formatted BLOCKQUOTE,
+  DIV.node DIV.content BLOCKQUOTE {
+    border-left-color: #dddddd;
+  }
+}
+
+DIV.iac-color-white-on-blue BLOCKQUOTE,
+DIV.iac-color-white-on-grey BLOCKQUOTE {
+  border-left-color: white;
+}
+
+DIV.iac-color-black-on-gold BLOCKQUOTE,
+DIV.iac-color-black-on-grey BLOCKQUOTE {
+  border-left-color: black;   border-left-color: var(--gtweb-black-text);
+}
+
+
+
+DIV.entry-content BLOCKQUOTE P, /* For WordPress */
+BODY.cke_editable BLOCKQUOTE P,
+DIV.text-formatted BLOCKQUOTE P,
+DIV.node DIV.content BLOCKQUOTE P {
+  position: relative;
+  margin: 0;
+}
+
+DIV.entry-content BLOCKQUOTE P + P, /* For WordPress */
+BODY.cke_editable BLOCKQUOTE P + P,
+DIV.text-formatted BLOCKQUOTE P + P,
+DIV.node DIV.content BLOCKQUOTE P + P {
+  margin-top: 12px;
+}
+
+DIV.entry-content BLOCKQUOTE P:first-child::before, /* For WordPress */
+BODY.cke_editable BLOCKQUOTE P:first-child::before,
+DIV.text-formatted BLOCKQUOTE P:first-child::before,
+DIV.node DIV.content BLOCKQUOTE P:first-child::before {
+  content: '\201c';
+  font-size: 1.5rem;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  margin-left: -8px;
+  line-height: 0;
+}
+
+DIV.entry-content BLOCKQUOTE P:first-child::after, /* For WordPress */
+BODY.cke_editable BLOCKQUOTE P:last-child::after,
+DIV.text-formatted BLOCKQUOTE P:last-child::after,
+DIV.node DIV.content BLOCKQUOTE P:last-child::after {
+  content: '\201d';
+  font-size: 1.5rem;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  line-height: 0;
+}
+
+/*== GT Buttons:  Blue on Gold, White on Blue, White on Dark Grey - CKEditor Styles ==*/
+
+P.gt-button-gold:not(:first-child),
+P.gt-button-blue:not(:first-child),
+P.gt-button-grey:not(:first-child) {
+  margin-top: 20px;
+}
+
+
+/* Kill the margin when CK Editor displays a sample of P.gt-button-gold
+   And color the CK Editor Sample Correctly */
+UL.cke_panel_list P.gt-button-gold,
+UL.cke_panel_list P.gt-button-blue,
+UL.cke_panel_list P.gt-button-grey {
+  margin-top: 0;
+  padding: 6px 18px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  border: dotted 1px transparent;
+  border-radius: 3px;
+}
+
+UL.cke_panel_list P.gt-button-gold {
+  background-color: #b3a369;  background-color: var(--gtweb-primary-gold);
+  color: #303030;  color: var(--gtweb-black-text);
+}
+
+UL.cke_panel_list P.gt-button-blue {
+  background-color: #00254c;  background-color: var(--gtweb-navy-blue);
+  color: #e0e0e0;
+}
+
+UL.cke_panel_list P.gt-button-grey {
+  background-color: #545454;
+  color: #e0e0e0;
+}
+
+/*-- Standard Definitions for All Button Types --*/
+
+@media all and (max-width: 450px) {
+  P.gt-button-gold A,
+  P.gt-button-grey A,
+  P.gt-button-blue A {
+    font-size: 85%;
+  }
+}
+
+BODY BUTTON.gt-button-gold,
+BODY BUTTON.gt-button-grey,
+BODY BUTTON.gt-button-blue,
+BODY P.gt-button-gold A,
+BODY P.gt-button-grey A,
+BODY P.gt-button-blue A {
+  display: inline-block;
+  margin: 0 8px 10px 0;
+  padding: 6px 18px;
+  white-space: nowrap;
+  transition: background .2s ease-in-out;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  border: dotted 1px transparent;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/*-- Metalic Gold Buttons: Black Text on Metalic Gold Background --*/
+
+BUTTON.gt-button-gold,
+P.gt-button-gold A {
+  background-color: #d0d0d0;  background-color: var(--gtweb-primary-gold);
+  color: #000000 !important;
+}
+
+BUTTON.gt-button-gold:focus,
+BUTTON.gt-button-gold:hover,
+P.gt-button-gold A:focus,
+P.gt-button-gold A:hover {
+  background-color: #eeeeee;  background-color: var(--gtweb-accent-gold);
+  border: dotted 1px black;
+}
+
+/*-- Grey Buttons: Bright White Text on Grey Background --*/
+
+P.gt-button-grey A {
+  background-color: #3b3b3b;
+  color: #ffffff !important;
+}
+
+P.gt-button-grey A:focus,
+P.gt-button-grey A:hover {
+  background-color: #545454;
+  border: dotted 1px #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  P.gt-button-grey A {
+    background-color: #d0d0d0;
+    color: #000000 !important;
+  }
+
+  P.gt-button-grey A:focus,
+  P.gt-button-grey A:hover {
+    background-color: #c0c0c0;
+    border: dotted 1px #303030;
+  }
+}
+
+
+/*-- Blue Buttons: Dimmed White Text on Navy Blue Background --*/
+
+P.gt-button-blue A {
+  background-color: #00254c;  background-color: var(--gtweb-navy-blue);
+  color: #e0e0e0 !important;
+}
+
+P.gt-button-blue A:focus,
+P.gt-button-blue A:hover {
+  background-color: #00153c;  background-color: var(--gtweb-navy-darkblue);
+  border: dotted 1px #e0e0e0;
+}
+
+/*== GT Standardized Heading Sizes and Formats ==*/
+
+/* Editor Mode: Hide text format options for headings */
+
+DIV.field--name-field-heading.field--widget-text-textfield DIV.filter-wrapper {
+  display: none;
+}
+
+/* General Heading Display Rules */
+
+H1, H2, H3, H4, H5, H6 {
+  font-family: "Abel", "Roboto Condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+}
+
+H1:first-child H2:first-child H3:first-child H4:first-child H5:first-child H6:first-child {
+  margin-top: .5em;
+}
+
+H1,
+H1.page-title {
+  font-size: 2.5rem;
+}
+
+BODY H2.gt-standard,
+DIV.entry-content H2,  /* For WordPress */
+DIV.block > H2,
+DIV.text-formatted H2,
+DIV#content H2,
+UL.cke_panel_list H2,
+BODY.cke_editable H2 {
+  font-size: 2.12rem;
+  margin-bottom: 0.3em;
+}
+
+BODY H3.gt-standard,
+DIV.entry-content H3,  /* For WordPress */
+DIV.block > H3,
+DIV.text-formatted H3,
+DIV.node DIV.content H3,
+UL.cke_panel_list H3,
+BODY.cke_editable H3 {
+  font-size: 1.75em;
+}
+
+BODY H4.gt-standard,
+DIV.entry-content H4,  /* For WordPress */
+DIV.text-formatted H4,
+DIV.node DIV.content H4,
+UL.cke_panel_list H4,
+BODY.cke_editable H4 {
+  font-size: 1.3em;
+}
+
+BODY H5.gt-standard,
+DIV.entry-content H5,  /* For WordPress */
+DIV.text-formatted H5,
+DIV.node DIV.content H5,
+UL.cke_panel_list H5,
+BODY.cke_editable H5 {
+  font-size: 1.2em;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+BODY H6.gt-standard,
+DIV.entry-content H6,  /* For WordPress */
+DIV.text-formatted H6,
+DIV.node DIV.content H6,
+UL.cke_panel_list H6,
+BODY.cke_editable H6 {
+  font-size: 1.1em;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Colors and Borders */
+
+H1 {
+  color: #303030;  color: var(--gtweb-heading-gold);
+}
+
+DIV.block > H2,
+.gt-heading-gold-bar {
+  border-top: 10px solid #e8eae7;
+  color: #303030;  color: var(--gtweb-heading-gold);
+}
+
+.gt-heading-gold {
+  padding: 0;
+  color: #303030;  color: var(--gtweb-heading-gold);
+}
+
+.gt-heading-blue {
+  padding: 0;
+  color: #303030;  color: var(--gtweb-black-text);
+  border-bottom: solid 4px;
+  border-color: var(--gtweb-navy-blue);
+} 
+
+.gt-heading-grey {
+  padding: 0;
+  color: #303030;  color: var(--gtweb-black-text);
+  border-bottom: solid 4px;
+  border-color: var(--gtweb-sitefooter-grey);
+}
+
+/*== Adjust the spacing around images ==*/
+
+/* Add spacing around caption images */
+
+FIGURE.caption {
+  margin: 8px 0 16px 0;
+}
+FIGURE.caption.align-center {
+  margin: 8px auto 16px auto;
+}
+FIGURE.caption.align-right {
+  margin: 8px 0px 16px 20px;
+}
+FIGURE.caption.align-left {
+  margin: 8px 20px 16px 0px;
+}
+
+/* Add spacing for floated images */
+
+IMG.align-left,
+SPAN.cke_widget_image.align-left {
+  margin-right: 10px;
+}
+
+IMG.align-right,
+SPAN.cke_widget_image.align-right {
+  margin-left: 10px;
+}
+
+/*== Base Unordered List Styles ==*/
+
+@media all and (min-width: 966px) {
+
+  UL.list-column-2,
+  DIV.text-formatted UL.list-column-2,
+  DIV.region-content UL.list-column-2,
+  UL.list-column-3,
+  DIV.text-formatted UL.list-column-3,
+  DIV.region-content UL.list-column-3,
+  UL.list-column-4,
+  DIV.text-formatted UL.list-column-4,
+  DIV.region-content UL.list-column-4 {
+    overflow: auto;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  UL.list-column-2 > LI,
+  UL.list-column-3 > LI,
+  UL.list-column-4 > LI {
+    box-sizing: border-box;
+  }
+
+}
+
+/** Two Columns Starting at 966px Page Width **/
+
+@media all and (min-width: 966px) {
+
+  UL.list-column-2 > LI,
+  UL.list-column-3 > LI,
+  UL.list-column-4 > LI {
+    flex: 1 1 48.8%;
+    max-width: 48.8%;
+  }
+
+  @supports (display: grid) {
+
+    UL.list-column-2,
+    UL.list-column-3,
+    UL.list-column-4,
+    DIV.text-formatted UL.list-column-2,
+    DIV.text-formatted UL.list-column-3,
+    DIV.text-formatted UL.list-column-4,
+    DIV.region-content UL.list-column-2,
+    DIV.region-content UL.list-column-3,
+    DIV.region-content UL.list-column-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 48.8%);
+      grid-gap: 0.8rem;
+      justify-content: space-between;
+    }
+
+    UL.list-column-2 > LI,
+    UL.list-column-3 > LI,
+    UL.list-column-4 > LI {
+      max-width: unset;
+    }
+
+  }
+
+}
+
+/** Three Columns Starting at 1040px **/
+
+@media all and (min-width: 1040px) {
+
+  UL.list-column-3 > LI,
+  UL.list-column-4 > LI,
+  UL.list-column-3 > LI,
+  UL.list-column-4 > LI {
+    flex: 1 1 31.8%;
+    max-width: 31.8%;
+  }
+
+  @supports (display: grid) {
+
+    UL.list-column-3,
+    UL.list-column-4,
+    DIV.text-formatted UL.list-column-3,
+    DIV.text-formatted UL.list-column-4,
+    DIV.region-content UL.list-column-3,
+    DIV.region-content UL.list-column-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 31.8%);
+      grid-gap: 0.8rem;
+      justify-content: space-between;
+    }
+
+    UL.list-column-3 > LI,
+    UL.list-column-4 > LI {
+      max-width: unset;
+    }
+
+  }
+
+}
+
+/** Four Columns Starting at 1100px **/
+
+@media all and (min-width: 1100px) {
+
+  UL.list-column-4 > LI {
+    flex: 1 1 24%;
+    max-width: 24%;
+  }
+
+  @supports (display: grid) {
+
+    UL.list-column-4,
+    DIV.text-formatted UL.list-column-4,
+    DIV.region-content UL.list-column-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 24%);
+      grid-gap: 0.8rem;
+      justify-content: space-between;
+    }
+
+    UL.list-column-4 > LI {
+      max-width: unset;
+    }
+
+  }
+
+}
+
+
+/*== Base Ordered List Styles ==*/
+
+@media all and (min-width: 966px) {
+
+  OL.list-column-2,
+  DIV.text-formatted OL.list-column-2,
+  DIV.region-content OL.list-column-2,
+  OL.list-column-3,
+  DIV.text-formatted OL.list-column-3,
+  DIV.region-content OL.list-column-3,
+  OL.list-column-4,
+  DIV.text-formatted OL.list-column-4,
+  DIV.region-content OL.list-column-4 {
+    overflow: auto;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  OL.list-column-2 > LI,
+  OL.list-column-3 > LI,
+  OL.list-column-4 > LI {
+    box-sizing: border-box;
+  }
+
+}
+
+/** Two Columns Starting at 966px Page Width **/
+
+@media all and (min-width: 966px) {
+
+  OL.list-column-2 > LI,
+  OL.list-column-3 > LI,
+  OL.list-column-4 > LI {
+    flex: 1 1 48.8%;
+    max-width: 48.8%;
+  }
+
+  @supports (display: grid) {
+
+    OL.list-column-2,
+    OL.list-column-3,
+    OL.list-column-4,
+    DIV.text-formatted OL.list-column-2,
+    DIV.text-formatted OL.list-column-3,
+    DIV.text-formatted OL.list-column-4,
+    DIV.region-content OL.list-column-2,
+    DIV.region-content OL.list-column-3,
+    DIV.region-content OL.list-column-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 48.8%);
+      grid-gap: 0.8rem;
+      justify-content: space-between;
+    }
+
+    OL.list-column-2 > LI,
+    OL.list-column-3 > LI,
+    OL.list-column-4 > LI {
+      max-width: unset;
+    }
+
+  }
+
+}
+
+/** Three Columns Starting at 1040px **/
+
+@media all and (min-width: 1040px) {
+
+  OL.list-column-3 > LI,
+  OL.list-column-4 > LI,
+  OL.list-column-3 > LI,
+  OL.list-column-4 > LI {
+    flex: 1 1 31.8%;
+    max-width: 31.8%;
+  }
+
+  @supports (display: grid) {
+
+    OL.list-column-3,
+    OL.list-column-4,
+    DIV.text-formatted OL.list-column-3,
+    DIV.text-formatted OL.list-column-4,
+    DIV.region-content OL.list-column-3,
+    DIV.region-content OL.list-column-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 31.8%);
+      grid-gap: 0.8rem;
+      justify-content: space-between;
+    }
+
+    OL.list-column-3 > LI,
+    OL.list-column-4 > LI {
+      max-width: unset;
+    }
+
+  }
+
+}
+
+/** Four Columns Starting at 1100px **/
+
+@media all and (min-width: 1100px) {
+
+  OL.list-column-4 > LI {
+    flex: 1 1 24%;
+    max-width: 24%;
+  }
+
+  @supports (display: grid) {
+
+    OL.list-column-4,
+    DIV.text-formatted OL.list-column-4,
+    DIV.region-content OL.list-column-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 24%);
+      grid-gap: 0.8rem;
+      justify-content: space-between;
+    }
+
+    OL.list-column-4 > LI {
+      max-width: unset;
+    }
+
+  }
+
+}
+
+/*== Drupal 8 Menu Block Formatting ==*/
+
+ASIDE DIV.region NAV.block-menu {
+  padding: 0;
+  border: none;
+  border-top: 4px solid var(--gtweb-primary-gold);
+  border-bottom: 1px solid black;
+}
+
+ASIDE DIV.region NAV.block-menu DIV.content > UL.menu {
+  padding-bottom: 8px;
+}
+
+ASIDE DIV.region NAV.block-menu DIV.content UL.menu UL.menu {
+  padding-left: 8px;
+}
+
+ASIDE DIV.region NAV.block-menu UL.menu LI {
+  padding: 4px 0;
+}
+
+ASIDE DIV.region NAV.block-menu UL.menu LI.menu-item--expanded {
+  list-style-image: unset;
+  list-style-type: none;
+}
+
+ASIDE DIV.region NAV.block-menu UL.menu A {
+  padding: 0;
+}
+
+ASIDE DIV.region NAV.block-menu UL.menu A.active {
+  font-weight: 500;
+}
+
+/*== Miscellaneus GT Stylings: Dictionary List w/H2s ==*/
+
+P.gt-gray-border {
+  border-top: 10px solid #e8eae7;
+  padding-top: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  P.gt-gray-border {
+    border-top: 10px solid #606060;
+  }
+}
+
+/* Define a DIV type within which a long list of dictonary-like definitions can be added, each marked by an H2 element */
+
+DIV.dictionary-list H2 {
+  font-size: 110% !important;
+}
+
+BODY {
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*== GT Sidebar Boxs - Blocks - Drupal 8 ==*/
+
+BODY.path-frontpage DIV.region-sidebar-second {
+  padding-top: 20px;
+}
+
+DIV.sidebar DIV.block-block-content,
+DIV.sidebar DIV.block-views {
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+DIV.sidebar DIV.block-block-content > H2,
+DIV.sidebar DIV.block-views > H2 {
+  margin: 0;
+  text-shadow: none;
+}
+
+/*== GT Sidebar Boxes - Nodes as Embedded Content - Drupal 8 ==*/
+
+ARTICLE.node--type-sidebar-box DIV.node__content {
+  background-color: #e0e0e0;
+  padding: 0 8px;
+  margin-bottom: 12px;
+}
+
+ARTICLE.node--type-sidebar-box DIV.node__content H2 {
+  margin: 0 -8px 12px -8px;
+  box-sizing: border-box;
+  padding: 0;
+  color: #303030;  color: var(--gtweb-black-text);
+  border-bottom: solid 4px;
+  border-color: #dddddd;  border-color: var(--gtweb-primary-gold);
+}
+
+/*== Table Headings (Set to Black on GT Gold) ==*/
+
+DIV.node TABLE TH,
+BODY.cke_editable TABLE TH,
+DIV.text-formatted TABLE TH,
+DIV.text-formatted TABLE TH A,
+DIV.text-formatted TABLE TH A:link,
+DIV.text-formatted TABLE TH A:visited,
+BODY.cke_editable TABLE TH A,
+BODY.cke_editable TABLE TH A:link,
+BODY.cke_editable TABLE TH A:visited {
+  background-color: #ffffff;  background-color: var(--gtweb-primary-gold);
+  font-family: abel;
+  font-size: 130%;
+  font-weight: 700;
+  color: #303030;  color: var(--gtweb-black-text);
+}
+
+DIV.text-formatted TABLE TH A,
+DIV.text-formatted TABLE TH A:link,
+DIV.text-formatted TABLE TH A:visited,
+BODY.cke_editable TABLE TH A,
+BODY.cke_editable TABLE TH A:link,
+BODY.cke_editable TABLE TH A:visited {
+  border-bottom-color: white;
+}
+
+DIV.text-formatted TABLE TH A:hover,
+DIV.text-formatted TABLE TH A:focus,
+BODY.cke_editable TABLE TH A:hover,
+BODY.cke_editable TABLE TH A:focus {
+  color: #555555;
+  border-bottom-color: #555555;
+}
+
+DIV.node TABLE TR,
+BODY.cke_editable TABLE TR,
+DIV.text-formatted TABLE TR {
+  background-color: #f8f8f8;
+}
+
+DIV.node TABLE TR:nth-of-type(2n+1),
+BODY.cke_editable TABLE TR:nth-of-type(2n+1),
+DIV.text-formatted TABLE TR:nth-of-type(2n+1) {
+  background-color: #d8d8d8;
+}
+
+@media (prefers-color-scheme: dark) {
+  BODY TR TD, BODY TR TH {
+    border: 1px solid #303030;
+  }
+
+  DIV.node TABLE TR,
+  DIV.text-formatted TABLE TR {
+    background-color: #181818;
+    color: #d0d0d0;  color: var(--gtweb-dark-text);
+  }
+  
+  DIV.node TABLE TR:nth-of-type(2n+1),
+  DIV.text-formatted TABLE TR:nth-of-type(2n+1) {
+    background-color: #383838;
+    color: #d0d0d0;  color: var(--gtweb-dark-text);
+  }
+}
+
+/*== GT Page Introduction Box ==*/
+
+P.iac-introduction {
+  width: 100%;
+  margin: 0 0 16px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 130%;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+UL.cke_panel_list P.iac-introduction {
+  margin: 0;
+}
+
+I.svg-menuburger {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMzInIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHBhdGggZD0iTSAwIDAgTCAzMiAwIEwgMzIgNiBMIDAgNiBaIiBmaWxsPSIjMDAwMDAwIiAvPgogIDxwYXRoIGQ9Ik0gMCAxMyBMIDMyIDEzIEwgMzIgMTkgTCAwIDE5IFoiIGZpbGw9IiMwMDAwMDAiIC8+CiAgPHBhdGggZD0iTSAwIDI2IEwgMzIgMjYgTCAzMiAzMiBMIDAgMzIgWiIgZmlsbD0iIzAwMDAwMCIgLz4KPC9zdmc+Cg==");
+  background-size: 100%;
+}
+
+I.svg-dropdown {
+  width: 9px;
+  height: 16px;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMTgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHBhdGggZD0iTSAwIDIyIEwgOCAzMSBMIDE2IDIyIEwgMTMgMTkgTCA4IDI1IEwgMyAxOSBaIiBmaWxsPSIjYWM5YTU4IiAvPgo8L3N2Zz4K");
+  background-size: 100%;
+}
+
+I.svg-magglass {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMzInIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGNpcmNsZSBjeD0iMTMiIGN5PSIxMyIgcj0iMTAiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiAvPgogIDxsaW5lIHgxPScxOScgeTE9JzE5JyB4Mj0nMzInIHkyPSczMicgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIC8+Cjwvc3ZnPgo=");
+  background-size: 100%;
+}
+
+I.svg-magglass-gold {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMzInIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGNpcmNsZSBjeD0iMTMiIGN5PSIxMyIgcj0iMTAiIHN0cm9rZT0iIzg2NzQzNyIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiAvPgogIDxsaW5lIHgxPScxOScgeTE9JzE5JyB4Mj0nMzInIHkyPSczMicgc3Ryb2tlPSIjODY3NDM3IiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIC8+Cjwvc3ZnPgo=");
+  background-size: 100%;
+}
+
+*:hover > I.svg-magglass-gold, *:focus I.svg-magglass-gold {
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMzInIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGNpcmNsZSBjeD0iMTMiIGN5PSIxMyIgcj0iMTAiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiAvPgogIDxsaW5lIHgxPScxOScgeTE9JzE5JyB4Mj0nMzInIHkyPSczMicgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIC8+Cjwvc3ZnPgo=");
+  background-size: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  *:hover > I.svg-magglass-gold, *:focus I.svg-magglass-gold {
+    background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMzInIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGNpcmNsZSBjeD0iMTMiIGN5PSIxMyIgcj0iMTAiIHN0cm9rZT0iI2RkZGRkZCIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiAvPgogIDxsaW5lIHgxPScxOScgeTE9JzE5JyB4Mj0nMzInIHkyPSczMicgc3Ryb2tlPSIjZGRkZGRkIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIC8+Cjwvc3ZnPgoK");
+    background-size: 100%;
+  }
+}
+
+I.svg-chevron-gold {
+  width: 7.5px;
+  height: 15px;
+  display: inline-block;
+  margin-bottom: -1px;
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMTYnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgPgogIDxwYXRoIGQ9Ik0gMCAxIEwgOCAxIEwgMTUgMTYgTCA4IDMxIEwgMCAzMSBMIDcgMTYgWiIgZmlsbD0iIzg2NzQzNyIgLz4KPC9zdmc+Cg==");
+  background-size: 100%;
+}
+
+*:hover > I.svg-chevron-gold, *:focus > I.svg-chevron-gold {
+  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMTYnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgPgogIDxwYXRoIGQ9Ik0gMCAxIEwgOCAxIEwgMTUgMTYgTCA4IDMxIEwgMCAzMSBMIDcgMTYgWiIgZmlsbD0iIzAwMDAwMCIgLz4KPC9zdmc+Cg==");
+  background-size: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  *:hover > I.svg-chevron-gold, *:focus > I.svg-chevron-gold {
+    background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMyJyB3aWR0aD0nMTYnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgPgogIDxwYXRoIGQ9Ik0gMCAxIEwgOCAxIEwgMTUgMTYgTCA4IDMxIEwgMCAzMSBMIDcgMTYgWiIgZmlsbD0iI2RkZGRkZCIgLz4KPC9zdmc+Cg==");
+    background-size: 100%;
+  }
+}
+
+
+I.svg-phone {
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAiIHdpZHRoPSIxMCIgZmlsbD0iIzI2MjYyNiIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjxwYXRoIGQ9Ik00OTcuMzkgMzYxLjhsLTExMi00OGEyNCAyNCAwIDAgMC0yOCA2LjlsLTQ5LjYgNjAuNkEzNzAuNjYgMzcwLjY2IDAgMCAxIDEzMC42IDIwNC4xMWw2MC42LTQ5LjZhMjMuOTQgMjMuOTQgMCAwIDAgNi45LTI4bC00OC0xMTJBMjQuMTYgMjQuMTYgMCAwIDAgMTIyLjYuNjFsLTEwNCAyNEEyNCAyNCAwIDAgMCAwIDQ4YzAgMjU2LjUgMjA3LjkgNDY0IDQ2NCA0NjRhMjQgMjQgMCAwIDAgMjMuNC0xOC42bDI0LTEwNGEyNC4yOSAyNC4yOSAwIDAgMC0xNC4wMS0yNy42eiIvPjwvc3ZnPgo=");
+  background-size: 100%;
+}
+
+I.svg-mapmarker {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAiIHdpZHRoPSIxMCIgZmlsbD0iIzI2MjYyNiIgdmlld0JveD0iMCAwIDM4NCA1MTIiPjxwYXRoIGQ9Ik0xNzIuMjY4IDUwMS42N0MyNi45NyAyOTEuMDMxIDAgMjY5LjQxMyAwIDE5MiAwIDg1Ljk2MSA4NS45NjEgMCAxOTIgMHMxOTIgODUuOTYxIDE5MiAxOTJjMCA3Ny40MTMtMjYuOTcgOTkuMDMxLTE3Mi4yNjggMzA5LjY3LTkuNTM1IDEzLjc3NC0yOS45MyAxMy43NzMtMzkuNDY0IDB6TTE5MiAyNzJjNDQuMTgzIDAgODAtMzUuODE3IDgwLTgwcy0zNS44MTctODAtODAtODAtODAgMzUuODE3LTgwIDgwIDM1LjgxNyA4MCA4MCA4MHoiLz48L3N2Zz4K");
+  background-size: 100%;
+}
+BODY HEADER DIV.gt-alert {
+  padding-bottom: 4px;
+  background-color: white;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message {
+  text-align: center;
+  font-size: 110%;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message > DIV + DIV {
+  border-top: solid thin #333333;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message > DIV {
+  padding: 8px 12px;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message > DIV.warning {
+  color: #333333;
+  background-color: #ffff99;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message > DIV.alert {
+  color: #333333;
+  background-color: #ff6666;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message > DIV.warning-orange {
+  color: #333333;
+  background-color: #f95e10;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message P {
+  margin: 0 0 8px 0;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message P:last-child {
+  margin: 0;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message P.gt-alert-date {
+  font-size: 75%;
+  line-height: 0.75;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message DIV.no-date P.gt-alert-date {
+  display: none;
+}
+
+BODY HEADER DIV.gt-alert DIV.gt-alert-message DIV.no-date P:nth-last-child(2) {
+  margin: 0;
+}
+
