@@ -157,6 +157,7 @@
   background-image: url('../images/colab-horizontal-black-130.png');
   background-position: 50% 50%;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #pwBTN1{
